@@ -18,6 +18,82 @@ CREATE TABLE `member`(
                          delDate DATETIME COMMENT '탈퇴 날짜'
 );
 
+## 회원정보 테이블 테스트 데이터
+
+INSERT INTO `member` SET
+  id = 1,
+  regDate = '2024-02-05 14:15:00',
+  updateDate = '2024-03-10 16:30:00',
+  loginId = 'admin',
+  loginPw = 'pw_hash2',
+  authLevel = 7,
+  `name` = '관리자',
+  nickname = '강아지왕',
+  gender = 1,
+  cellphoneNum = '010-8765-4321',
+  delStatus = 0,
+  delDate = NULL;
+
+
+INSERT INTO `member` SET
+    id = 2,
+  regDate = '2024-01-10 10:30:00',
+  updateDate = '2024-02-10 12:00:00',
+  loginId = 'user01',
+  loginPw = 'pw_hash1',
+  authLevel = 3,
+  `name` = '김서준',
+  nickname = '콩이의대장',
+  gender = 1,
+  cellphoneNum = '010-1234-5678',
+  delStatus = 0,
+  delDate = NULL;
+
+
+
+INSERT INTO `member` SET
+    id = 3,
+  regDate = '2024-03-20 09:45:00',
+  updateDate = '2024-04-25 14:15:00',
+  loginId = 'user02',
+  loginPw = 'pw_hash3',
+  authLevel = 3,
+  `name` = '이지아',
+  nickname = '바둑이의수호자',
+  gender = 0,
+  cellphoneNum = '010-1111-2222',
+  delStatus = 1,
+  delDate = '2024-05-01 10:30:00';
+
+INSERT INTO `member` SET
+    id = 4,
+  regDate = '2024-04-18 16:00:00',
+  updateDate = '2024-05-20 09:00:00',
+  loginId = 'user03',
+  loginPw = 'pw_hash4',
+  authLevel = 3,
+  `name` = '박도윤',
+  nickname = '두부의행복전도사',
+  gender = 1,
+  cellphoneNum = '010-3333-4444',
+  delStatus = 0,
+  delDate = NULL;
+
+INSERT INTO `member` SET
+    id = 5,
+  regDate = '2024-05-22 11:30:00',
+  updateDate = '2024-06-10 15:45:00',
+  loginId = 'user04',
+  loginPw = 'pw_hash5',
+  authLevel = 3,
+  `name` = '최하은',
+  nickname = '뭉치의천사',
+  gender = 0,
+  cellphoneNum = '010-5555-6666',
+  delStatus = 0,
+  delDate = NULL;
+
+
 ## 반려견 테이블
 CREATE TABLE `dog`(
                       id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT '식별번호',
@@ -149,3 +225,8 @@ CREATE TABLE doghealth(
                           checkupDate DATETIME NOT NULL COMMENT '건강 검진 날짜',
                           activityLevel FLOAT NOT NULL COMMENT '활동량(평균걸음수)'
 );
+
+## init 끝
+##############################################
+
+SELECT * FROM `member`;

@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TailsRoute</title>
-
-    <!-- 테일윈드 -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
+    <link href="/resource/dist/styles.css" th:href="@{/resource/dist/styles.css}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-<header style="background-color: #4D3E3E;">
-    <nav class="container mx-auto flex items-center justify-center">
-        <ul>
-        <div class="tails-route">TailsRoute</div>
-            <div class="community">Community</div>
-            <div class="health">Health</div>
-            <div class="pet-records">Pet Records</div>
-            <div class="user-person">이미지</div>
-        </ul>
-    </nav>
-</header>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<div class="tw-p-5" style="background-color: #4D3E3E;">
+    <div class="tw-container tw-mx-auto tw-flex tw-justify-between tw-items-baseline">
+        <a href="../home/main" class="tw-text-white tw-text-2xl">TailsRoute</a>
+        <div>
+            <ul class="tw-flex tw-space-x-4">
+                <li><a href="/" class="tw-text-white tw-cursor-pointer">병원</a></li>
+                <li><a href="/" class="tw-text-white tw-cursor-pointer">커뮤니티</a></li>
+                <li><a href="/" class="tw-text-white tw-cursor-pointer">일상기록</a></li>
+                <li><a href="/" class="tw-text-white tw-cursor-pointer">쇼핑</a></li>
+                <li><a href="/" class="tw-text-white tw-cursor-pointer">건강관리</a></li>
+                <li><a href="/" class="tw-text-white tw-cursor-pointer">실종신고</a></li>
+            </ul>
+        </div>
+        <div class="tw-text-white tw-text-lg">프로필</div>
+    </div>
+</div>
 </body>
 </html>

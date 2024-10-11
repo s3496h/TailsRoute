@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>24 hour hospital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resource/css/hospital.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.4/tailwind.min.css">
+
+    <!--  헤더 파일 추가  -->
+<!--    <th:block th:include="usr/common/head :: header"></th:block>-->
+
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/resource/js/hospital.js"></script>
+
+<h1>
+    24 hour hospital
+</h1>
+
+<h1 class="message">
+    24 시간 병원
+</h1>
+
+<div class="message2 cursor-pointer" th:text="${message}"></div>
+
+<!-- Google Maps API를 불러오는 스크립트 -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+<!-- 지도를 표시할 div -->
+<div id="map"></div>
+
+</body>
+</html>
